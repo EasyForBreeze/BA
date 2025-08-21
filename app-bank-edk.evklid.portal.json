@@ -1,0 +1,218 @@
+{
+  "clientId": "app-bank-edk.evklid.portal",
+  "name": "Электронное досье клиента",
+  "description": "",
+  "rootUrl": "",
+  "adminUrl": "",
+  "baseUrl": "",
+  "surrogateAuthRequired": false,
+  "enabled": true,
+  "alwaysDisplayInConsole": false,
+  "clientAuthenticatorType": "client-secret",
+  "redirectUris": [
+    "https://docstore-front.test.evklid.domrfbank.ru/*",
+    "https://docstore-front.evklid.domrfbank.ru/*",
+    "http://dcs-pp-app01.roscap.com:8084/*",
+    "https://oauth.pstmn.io/v1/callback"
+  ],
+  "webOrigins": [
+    "+"
+  ],
+  "notBefore": 0,
+  "bearerOnly": false,
+  "consentRequired": false,
+  "standardFlowEnabled": true,
+  "implicitFlowEnabled": false,
+  "directAccessGrantsEnabled": false,
+  "serviceAccountsEnabled": false,
+  "publicClient": true,
+  "frontchannelLogout": false,
+  "protocol": "openid-connect",
+  "attributes": {
+    "saml.multivalued.roles": "false",
+    "saml.force.post.binding": "false",
+    "frontchannel.logout.session.required": "false",
+    "oauth2.device.authorization.grant.enabled": "false",
+    "backchannel.logout.revoke.offline.tokens": "false",
+    "saml.server.signature.keyinfo.ext": "false",
+    "use.refresh.tokens": "true",
+    "oidc.ciba.grant.enabled": "false",
+    "exclude.issuer.from.auth.response": "true",
+    "backchannel.logout.session.required": "true",
+    "client_credentials.use_refresh_token": "false",
+    "saml.client.signature": "false",
+    "require.pushed.authorization.requests": "false",
+    "saml.allow.ecp.flow": "false",
+    "dpop.bound.access.tokens": "false",
+    "saml.assertion.signature": "false",
+    "id.token.as.detached.signature": "false",
+    "client.secret.creation.time": "1691148471",
+    "saml.encrypt": "false",
+    "saml.server.signature": "false",
+    "exclude.session.state.from.auth.response": "false",
+    "saml.artifact.binding": "false",
+    "saml_force_name_id_format": "false",
+    "tls.client.certificate.bound.access.tokens": "false",
+    "acr.loa.map": "{}",
+    "saml.authnstatement": "false",
+    "display.on.consent.screen": "false",
+    "token.response.type.bearer.lower-case": "false",
+    "listener_session": "false",
+    "saml.onetimeuse.condition": "false"
+  },
+  "authenticationFlowBindingOverrides": {},
+  "fullScopeAllowed": true,
+  "nodeReRegistrationTimeout": -1,
+  "protocolMappers": [
+    {
+      "name": "edk_manager_ip",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_manager_ip",
+        "new.role.name": "edk_manager_ip"
+      }
+    },
+    {
+      "name": "edk_emloyee_ul",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_emloyee_ul",
+        "new.role.name": "edk_emloyee_ul"
+      }
+    },
+    {
+      "name": "edk_emloyee_ip",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_emloyee_ip",
+        "new.role.name": "edk_emloyee_ip"
+      }
+    },
+    {
+      "name": "roles",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-usermodel-realm-role-mapper",
+      "consentRequired": false,
+      "config": {
+        "multivalued": "true",
+        "userinfo.token.claim": "true",
+        "id.token.claim": "false",
+        "access.token.claim": "true",
+        "claim.name": "groups",
+        "jsonType.label": "String"
+      }
+    },
+    {
+      "name": "edk_manager_ul",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_manager_ul",
+        "new.role.name": "edk_manager_ul"
+      }
+    },
+    {
+      "name": "edk_reader_fl",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_reader_fl",
+        "new.role.name": "edk_reader_fl"
+      }
+    },
+    {
+      "name": "edk_reader_ip",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_reader_ip",
+        "new.role.name": "edk_reader_ip"
+      }
+    },
+    {
+      "name": "edk_integration",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_integration",
+        "new.role.name": "edk_integration"
+      }
+    },
+    {
+      "name": "edk_manager_fl",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_manager_fl",
+        "new.role.name": "edk_manager_fl"
+      }
+    },
+    {
+      "name": "edk_reader_ul",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_reader_ul",
+        "new.role.name": "edk_reader_ul"
+      }
+    },
+    {
+      "name": "edk_admin",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_admin",
+        "new.role.name": "edk_admin"
+      }
+    },
+    {
+      "name": "edk_sec_admin",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_sec_admin",
+        "new.role.name": "edk_sec_admin"
+      }
+    },
+    {
+      "name": "edk_emloyee_fl",
+      "protocol": "openid-connect",
+      "protocolMapper": "oidc-role-name-mapper",
+      "consentRequired": false,
+      "config": {
+        "role": "app-bank-edk.evklid.portal.gsl-edk_emloyee_fl",
+        "new.role.name": "edk_emloyee_fl"
+      }
+    }
+  ],
+  "defaultClientScopes": [
+    "web-origins",
+    "profile",
+    "email"
+  ],
+  "optionalClientScopes": [
+    "address",
+    "phone",
+    "offline_access",
+    "microprofile-jwt"
+  ],
+  "access": {
+    "view": true,
+    "configure": true,
+    "manage": true
+  }
+}
